@@ -8,6 +8,7 @@ import { Button } from 'react-bootstrap';
 function App() {
   const [data, setData] = useState(false)
   const [first, setFirst] = useState(0)
+  const [second, setSecond] = useState(0)
   function over() {
     setData(!data)
     if (data === false) {
@@ -18,18 +19,21 @@ function App() {
     }
   }
   function add() {
-    setFirst(first + 1)
-    if (first === 10) {
-      setFirst(first + 0)
-    }
+    setFirst(first + 2)
   }
   function reset() {
     setFirst(0)
   }
   function sub() {
     setFirst(first - 1)
-    if(first === 0){
-      setFirst (first - 0)
+    if (first === 0) {
+      setFirst (first-0)
+    }
+  }
+  function save() {
+    setSecond(first + "," + second)
+    if (first != 0) {
+      setFirst (0)
     }
   }
   return (
@@ -69,9 +73,13 @@ function App() {
         </Navbar>
         <Container>
           <h2>{first}</h2>
+          <h2>{second}</h2>
+          <div className='d-flex gap-4'>
           <Button onClick={add}>ADD</Button>
           <Button onClick={sub}>sub</Button>
           <Button onClick={reset}>reset</Button>
+          <Button onClick={save}>save</Button>
+          </div>
         </Container>
       </div>
     </>
