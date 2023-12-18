@@ -60,7 +60,7 @@ function App() {
               <span></span>
             </label>
             <Nav className={`d-flex justify-content-center align-items-center justify-content-md-end mobile ${data ? "end-0" : "close"}`} >
-              <Nav.Link className='text-white' href="#home" onClick={over}>Home</Nav.Link>
+              <Nav.Link className='text-white' href="#home" >Home</Nav.Link>
               <Nav.Link className='text-white' href="#link">Link</Nav.Link>
               <Nav.Link className='text-white' href="#link">Link</Nav.Link>
               <Nav.Link className='text-white' href="#link">Link</Nav.Link>
